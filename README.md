@@ -48,8 +48,9 @@ You can also run orders directly from your terminal:
 ## 🖥️ Web UI Tutorial
 
 The application features a modern, clean, and interactive Web interface designed to easily test order execution.
-
-![Web UI Preview](assets/web_ui_preview.png)
+<p align="center">
+  <img src="assets/web_ui_preview.png" alt="Web UI Preview" width="400" />
+</p>
 
 ### Steps to Place an Order:
 1. **Launch the Server**: Start the local Flask server by running `python app.py`.
