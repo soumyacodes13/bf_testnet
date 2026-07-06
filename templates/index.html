@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binance Futures Bot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Binance Futures</h1>
+            <p class="subtitle">Testnet Trading Bot</p>
+        </header>
+
+        <form id="order-form">
+            <div class="form-group">
+                <label for="symbol">Symbol</label>
+                <input type="text" id="symbol" name="symbol" value="BTCUSDT" required placeholder="e.g. BTCUSDT">
+            </div>
+            
+            <div class="row">
+                <div class="form-group">
+                    <label for="side">Side</label>
+                    <select id="side" name="side" required>
+                        <option value="BUY">BUY</option>
+                        <option value="SELL">SELL</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="type">Type</label>
+                    <select id="type" name="type" required>
+                        <option value="MARKET">MARKET</option>
+                        <option value="LIMIT">LIMIT</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label for="qty">Quantity</label>
+                    <input type="number" id="qty" name="qty" step="0.001" min="0.001" required placeholder="0.01">
+                </div>
+                
+                <div class="form-group">
+                    <label for="price">Price <span class="optional">(Limit only)</span></label>
+                    <input type="number" id="price" name="price" step="0.01" placeholder="e.g. 62000.00">
+                </div>
+            </div>
+
+            <button type="submit" id="submit-btn">
+                <span class="btn-text">Place Order</span>
+                <div class="spinner hidden"></div>
+            </button>
+        </form>
+
+        <div id="result-box" class="result-box hidden">
+            <!-- Dynamic Result Content -->
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

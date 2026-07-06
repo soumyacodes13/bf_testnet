@@ -1,0 +1,16 @@
+# Environment variables (contains private keys)
+.env
+
+# Logs
+bot.log
+*.log
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Editor configurations
+.vscode/
+.idea/
